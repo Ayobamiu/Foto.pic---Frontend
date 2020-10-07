@@ -39,20 +39,13 @@ class Photos extends Component {
   };
 
   render() {
-    const { user, albums: data } = this.props;
-    // user &&
-    //   data.filter((item) => {
-    //     if (item.favourite) {
-    //       if (item.favourite.includes(user.user_id)) {
-    //         item.is_fav = true;
-    //         return item;
-    //       }
-    //     }
-    //   });
+    const { user, albums } = this.props;
+    console.log(this.props);
+
     return (
       <div className="">
         <div className="photos">
-          {data.map((item) => (
+          {albums.map((item) => (
             <Photo
               key={item.id}
               item={item}
